@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="main">
+            <div id="call">Call</div>
+            <h4 id="book">Book a Call</h4>
+            <h3 id="book2">Book a call and our representative will call you within 1hr of selected time</h3>
+            <hr>
+            <form action="#" class="formInputs">
+                <label for="username" class="formInputs">Name:</label><br>
+                <input type="text" name="username" id="username" class="formInputs" placeholder="Enter Your Name" required>
+
+                <label for="userEmail" class="formInputs">Email:</label><br>
+                <input type="email" name="userEmail" id="userEmail" class="formInputs" placeholder="Enter Email Id" required>
+
+                <label for="phoneNumber" class="formInputs">Phone:</label><br>
+                <input type="number" name="phoneNumber" id="phoneNumber" class="formInputs"
+                    placeholder="Enter Phone Number" required min="10" max="10"><br>
+
+                <div id="appointment">
+                    <label for="date" class="formInputs">Time for Call:</label><br>
+                    <input type="date" name="date" id="date" required >
+
+                    <select name="time" id="time" required>
+                        <option value="11:00AM" >11:00AM</option>
+                        <option value="12:00PM" selected>12:00PM</option>
+                        <option value="01:00PM">01:00PM</option>
+                        <option value="02:00PM">02:00PM</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submit" class="formInputs">GET A CALL</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
