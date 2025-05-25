@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form with Dynamic Table</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <main>
-        <div id="main">
-            <div id="call">Call</div>
-            <h4 id="book">Book a Call</h4>
-            <h3 id="book2">Book a call and our representative will call you within 1hr of selected time</h3>
-            <hr>
-            <form action="#" class="formInputs">
-                <label for="username" class="formInputs">Name:</label><br>
-                <input type="text" name="username" id="username" class="formInputs" placeholder="Enter Your Name" required>
 
-                <label for="userEmail" class="formInputs">Email:</label><br>
-                <input type="email" name="userEmail" id="userEmail" class="formInputs" placeholder="Enter Email Id" required>
+    <form id="callForm">
+        <h2>Book a Call</h2>
+        <label for="myName">Name</label>
+        <input type="text" id="myName" required>
 
-                <label for="phoneNumber" class="formInputs">Phone:</label><br>
-                <input type="number" name="phoneNumber" id="phoneNumber" class="formInputs"
-                    placeholder="Enter Phone Number" required min="10" max="10"><br>
+        <label for="myEmail">Email</label>
+        <input type="email" id="myEmail" required>
 
-                <div id="appointment">
-                    <label for="date" class="formInputs">Time for Call:</label><br>
-                    <input type="date" name="date" id="date" required >
+        <label for="myNumber">Phone</label>
+        <input type="number" id="myNumber" required>
 
-                    <select name="time" id="time" required>
-                        <option value="11:00AM" >11:00AM</option>
-                        <option value="12:00PM" selected>12:00PM</option>
-                        <option value="01:00PM">01:00PM</option>
-                        <option value="02:00PM">02:00PM</option>
-                    </select>
-                </div>
-
-                <button type="submit" id="submit" class="formInputs">GET A CALL</button>
-            </form>
+        <label for="dateForCall">Time For Call:</label>
+        <div class="date-time-row">
+            <input type="date" id="dateForCall" required>
+            <select id="time">
+                <option value="10:00AM">10:00AM</option>
+                <option value="11:00AM" selected>11:00AM</option>
+                <option value="12:00PM">12:00PM</option>
+                <option value="01:00PM">01:00PM</option>
+            </select>
         </div>
-    </main>
+
+        <button type="submit">GET A CALL</button>
+    </form>
+
+    <!-- Table to show submitted details -->
+    <div id="tableContainer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
